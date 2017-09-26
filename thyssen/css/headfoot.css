@@ -1,0 +1,73 @@
+/*
+* @Author: Administrator
+* @Date:   2017-02-04 11:12:13
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-02-04 11:13:45
+*/
+header{
+	height: 75px;
+	box-shadow: 0 0 20px #bbb;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+}
+
+header .logo{
+	padding: 0 0 0 40px;
+}
+header .blankdiv{
+	flex:4;
+}
+header nav{
+	flex: 9;
+}
+header nav ul{
+	width:100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+header nav ul li a {
+    display: block;
+    height: 70px;
+    font: normal 16px/70px "微软雅黑";
+    color: #7f7f7f;
+}
+
+.active{
+	color: #000;
+    border-bottom: 5px solid #000;	
+}
+.acthover{
+	border-bottom: 5px solid #7f7f7f;
+}
+
+
+/*footer*/
+footer{
+	font-size:14px;
+	padding: 20px;
+	padding-bottom: 0;
+	line-height:30px;
+	display: flex;
+	justify-content: space-around;
+	background: #e7e5da;
+}
+footer p a{
+	padding: 0 10px;
+	color: #689f9f;
+}
+footer b{
+	font-size:16px;
+	font-weight:700;
+}
+
+footer .qrcode{
+	
+}
+footer .qrcode img{
+	width:94px;
+}

@@ -8,12 +8,15 @@
 </head>
 <body>
     <div>
-        <img src="full_res (2).jpg" alt="" style=" width:400px;">
+        <img src="full_res (2).jpg" alt="" style=" width:400px;display:none">
     </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    $('img').fadeIn(5000);
-    $('img').fadeOut(5000);
+    setTimeout(function(){
+        $('img').fadeIn(5000);
+        $('img').fadeOut(5000);
+    },3000)
+    
 </script>
 </html>

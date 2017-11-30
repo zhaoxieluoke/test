@@ -1,0 +1,18 @@
+body { padding-bottom: 40px; }
+
+ul, li { list-style: none; padding: 0; margin: 0; }
+
+.situation1 ul { height: 50px; border: 1px solid #4c4c4c; }
+
+.situation1 .way1 li { top: 50%; position: relative; transform: translateY(-50%); }
+.situation1 .way2 li { line-height: 50px; }
+.situation1 .way3 { position: relative; }
+.situation1 .way3 li { top: 50%; position: absolute; transform: translateY(-50%); }
+
+.situation2 ul { height: 50px; border: 1px solid #4c4c4c; }
+.situation2 .way1 .icon { font-size: 36px; position: relative; top: 50%; transform: translateY(-50%); }
+
+.situation3 ul { height: 50px; border: 1px solid #4c4c4c; }
+.situation3 .way1 .icon { font-size: 36px; position: relative; top: 50%; transform: translateY(-50%); }
+
+/*# sourceMappingURL=style.css.map */

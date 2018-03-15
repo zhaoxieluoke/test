@@ -48,15 +48,6 @@ var print = function print(config) {
         }
     });
 
-    //已经选择的区域信息存储
-    var choosed_area = [{
-        title: '第一版',
-        left: 100,
-        top: 100,
-        width: 100,
-        height: 100
-    }];
-
     //鼠标按下 记录初始位置 定位
     $container.on('mousedown', function (event) {
         if ($file[0].files.length === 0) return false;
@@ -68,9 +59,6 @@ var print = function print(config) {
         if ($('.complete-box').css('display') == 'none') {
             is_start = true;
         }
-        //起始位置边界检测
-        var print_top = iClientY - $container.offset().top; //当前选定区域 top
-        var print_left = iClientX - $container.offset().left; //当前选定区域 left
 
         //开始绘制
         if (is_start) {
@@ -176,22 +164,7 @@ var print = function print(config) {
         $('.span_save').trigger("click");
     });
 };
-//数据绑定
-function bindModelInput(obj, property, domElem) {
-    Object.defineProperty(obj, property, {
-        get: function get() {
-            return domElem.value;
-        },
-        set: function set(newValue) {
-            domElem.value = newValue;
-        },
-        configurable: true
-    });
-}
 
-//<input id="foo">
-var user = {};
-bindModelInput(user, 'name', document.getElementById('foo'));
 //调用 进行绘制
 $(function () {
     print({

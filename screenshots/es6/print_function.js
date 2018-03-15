@@ -55,16 +55,6 @@
             }
         })
 
-        //已经选择的区域信息存储
-        let choosed_area = [
-                {
-                    title: '第一版',
-                    left: 100,
-                    top: 100,
-                    width: 100,
-                    height: 100
-                }
-            ];
         
         //鼠标按下 记录初始位置 定位
         $container.on('mousedown', function(event){
@@ -77,9 +67,6 @@
             if($('.complete-box').css('display') == 'none') {
                 is_start = true;
             }
-            //起始位置边界检测
-            let print_top = iClientY - $container.offset().top; //当前选定区域 top
-            let print_left = iClientX - $container.offset().left; //当前选定区域 left
 
             //开始绘制
             if(is_start) {
@@ -193,18 +180,7 @@
         })
         
     }
-    //数据绑定
-    function bindModelInput(obj, property, domElem) {
-        Object.defineProperty(obj, property, {
-            get: function() { return domElem.value; }, 
-            set: function(newValue) { domElem.value = newValue; },
-            configurable: true
-        });
-    }
 
-    //<input id="foo">
-    let user = {};
-    bindModelInput(user,'name',document.getElementById('foo'));
     //调用 进行绘制
     $(function(){
         print({

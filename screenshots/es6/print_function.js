@@ -92,7 +92,6 @@
                     distance_x_limit = $('.box').width() - iOffsetX, //x最大滑动距离
                     distance_y_limit = $('.box').height() - iOffsetY; //y最大滑动距离
                     
-                //移动超出边界
                 // 滑动距离超出边界
                 (drop_height > distance_y_limit)|| (drop_width > distance_x_limit) && (is_start = false);
                 // 通过长宽变化绘制矩形

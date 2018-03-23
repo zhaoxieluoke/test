@@ -91,15 +91,10 @@
                     drop_left_final = iOffsetX + drop_width, //滑动left终点位置
                     distance_x_limit = $('.box').width() - iOffsetX, //x最大滑动距离
                     distance_y_limit = $('.box').height() - iOffsetY; //y最大滑动距离
-                //移动边界检测
-                choosed_area.forEach((ele, index)=>{
-                    let choosed_top_final = ele.top + ele.height; //已选区域 top终点值
-                    let choosed_left_final = ele.left + ele.width; //已选区域 left终点值
                     
-                    //移动超出边界
-                    // 滑动距离超出边界
-                    (drop_height > distance_y_limit)|| (drop_width > distance_x_limit) && (is_start = false);
-                })
+                //移动超出边界
+                // 滑动距离超出边界
+                (drop_height > distance_y_limit)|| (drop_width > distance_x_limit) && (is_start = false);
                 // 通过长宽变化绘制矩形
                 $('.drop-box').css({
                     'width': `${drop_width}px`,

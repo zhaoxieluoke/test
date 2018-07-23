@@ -111,6 +111,7 @@
                     'left': 0,
                     'position': 'static' 
                 });
+                
             }
             return false;
         });
@@ -129,13 +130,14 @@
                 });
                 //获取canvas上绘制矩形数据
                 var clipImg = ctx.getImageData( iOffsetX, iOffsetY, drop_width, drop_height);
-                $clip[0].width = drop_width;
-                $clip[0].height = drop_height;
+                $clip.width(drop_width);
+                $clip.height(drop_height);
                 var set = clip_ctx.putImageData(clipImg, 0, 0);  
                 var imgurl = $clip[0].toDataURL();
                 $('.save').prop('href', imgurl);
                 $('.save').prop('download', imgurl);
                 // 绘制状态置为false
+                
                 is_start = false;
                 $('.btn').prop('disabled', false);
                 let position_txt = `top:${iOffsetY}, left:${iOffsetX}, width:${$('.drop-box').width()}, height:${$('.drop-box').height()}`;
@@ -165,6 +167,8 @@
             });
             $('.btn').prop('disabled', true);
             $('.position-txt').html('');
+            $clip.width(0);
+            $clip.height(0);
         }
         $('[disabled]').on('click', function(){
             return false;
@@ -180,5 +184,6 @@
         print({
             container: ".box"
         });
+
     })
     
